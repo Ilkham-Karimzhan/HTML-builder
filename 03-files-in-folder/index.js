@@ -13,7 +13,9 @@ fs.readdir(
       fs.stat(filePath, (error, stats) => {
         if (error) return console.log(error);
         console.log(
-          `${item.name} - ${path.extname(item.name)} - ${stats.size} bytes`
+          `${item.name.split(".")[0]} - ${path.extname(item.name)} - ${
+            stats.size
+          } bytes`
         );
       });
     });
